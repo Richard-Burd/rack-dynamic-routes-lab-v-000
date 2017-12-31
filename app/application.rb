@@ -16,8 +16,8 @@ class Application
       end
     elsif req.path.match(/all/)
       @@items.each do |thingy|
-        resp.write "#{thingy}" 
-      end 
+        resp.write "#{thingy.name} - #{thingy.price}"
+      end
     else
       resp.status=404
       resp.write "Route not found"
