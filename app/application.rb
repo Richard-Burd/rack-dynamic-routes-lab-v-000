@@ -16,7 +16,7 @@ class Application
       end
     elsif req.path.match(/all/)
       @@items.each do |thingy|
-        resp.write "#{thingy.name} - #{thingy.price}"
+        resp.write "#{thingy.name} - #{thingy.price}\n\n\n"
       end
     else
       resp.status=404
