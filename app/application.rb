@@ -14,9 +14,10 @@ class Application
         resp.status = 400
         resp.write "Item not found"
       end
-    elsif req.path.match(/all/) 
-      @@items.each do |thingy| 
-        resp.write "#{thingy}"  
+    elsif req.path.match(/all/)
+      @@items.each do |thingy|
+        resp.write "#{thingy}" 
+      end 
     else
       resp.status=404
       resp.write "Route not found"
